@@ -40,18 +40,15 @@ describe('Tempo', () => {
     });
 
     it('should call fetch with the corret URL', () => {
-      const city = getCity('3445709'); //passo o id
+      const city = getCity(['3421319,3445709,184745']);
       expect(stubedFetch).to.have.been
-        .calledWith('http://api.openweathermap.org/data/2.5/group?id=3445709&mode=json&units=metric&appid=a0bf404919f7603c5bde4b4291c5a1c3');
+        .calledWith('http://api.openweathermap.org/data/2.5/group?id=3421319,3445709,184745&mode=json&units=metric&appid=a0bf404919f7603c5bde4b4291c5a1c3');
 
-      const city2 = getCity('2i6nd4FV6y7K9fln6eelmK');
-      expect(stubedFetch).to.have.been
-        .calledWith('http://api.openweathermap.org/data/2.5/group?id=3445709&mode=json&units=metric&appid=a0bf404919f7603c5bde4b4291c5a1c3');
     });
 
     it('should return the correct data from Promise', () => {
       promise.resolves({ city: 'name' });
-      const city = getCity('3445709');
+      const city = getCity(['3421319,3445709,184745']);
       expect(city.resolveValue).to.be.eql({ city: 'name' });
     });
 
