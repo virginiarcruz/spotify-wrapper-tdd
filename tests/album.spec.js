@@ -18,7 +18,7 @@ describe('Album', () => {
     promise = stubedFetch.returnsPromise();
   });
 
-  afterEach(() => {
+  afterEach(() => {  // tenho que limpar o stubedfetch, voltar ao estado original
     stubedFetch.restore();
   });
 
