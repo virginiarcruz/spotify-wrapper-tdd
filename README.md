@@ -1,6 +1,6 @@
-# Spotify Wrapper
-
 [![Build Status](https://travis-ci.org/virginiarcruz/spotify-wrapper-tdd.svg?branch=master)](https://travis-ci.org/virginiarcruz/spotify-wrapper-tdd)
+
+# Spotify Wrapper
 
 A wrapper to work with the [Spotify Web API](https://developer.spotify.com/web-api/).
 
