@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/virginiarcruz/spotify-wrapper-tdd.svg?branch=master)](https://travis-ci.org/virginiarcruz/spotify-wrapper-tdd)
+[![Coverage Status](https://coveralls.io/repos/github/virginiarcruz/spotify-wrapper-tdd/badge.svg?branch=master)](https://coveralls.io/github/virginiarcruz/spotify-wrapper-tdd?branch=master)
 
 # Spotify Wrapper
 

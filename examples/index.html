@@ -10,7 +10,11 @@
 
   <script src="../dist/spotify-wrapper.umd.js">  </script>
 
-  <script>
+  <!-- <script>
+    const spotify = new SpotifyWrapper({
+      token: ''
+    })
+
     const albums = spotifyWrapper.searchAlbums('Incubus');
     const albumsEl = document.getElementById('albums');
 
@@ -23,6 +27,26 @@
         albumsEl.innerHTML = markup;
       })
 
+  </script> -->
+
+<script>
+    const spotify = new spotifyWrapper({
+      token: 'BQB1gxow61SGQBZBUxLC32Mix_qke_etS7BJt__Akbe8K1z7KVE2VsiOX_zdWfIu9QaMrpIYhwv3DkeZVqY8uKYBdW2g-ct6kVdoaAdBtpaiTNnOfvIa9qNytnyD4wpjgmlSyZNmlgcxhLk'
+    })
+
+    const albums = spotify.search.albums('Incubus');
+    const albumsEl = document.getElementById('albums');
+
+    albums
+      .then(data => {
+        markup = data.albums.items.map(item =>
+          `<img src='${item.images[0].url}' alt='${item.name}' />`
+        ).join('');
+
+        albumsEl.innerHTML = markup;
+      })
   </script>
+
+
 </body>
 </html>
