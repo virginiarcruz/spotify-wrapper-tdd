@@ -1,7 +1,14 @@
+/* to run: babel-node albums.js */
+
 global.fetch = require('node-fetch');
 
-import { searchAlbums } from '../src/main';
+import SpotifyWrapper from '../src/index';
 
-const albums = searchAlbums('Incubus');
+const spotify = new SpotifyWrapper({
+  token: 'BQCyq1gp1-UeJOc-ftERQmljymYXh_og3rKtBOcK8527JQJXoxGKvl1wA5Jfmv9eTJ9KW4coOub8oI6_GdDrNky7Yk1ZBsnzToBi31FVRA0MtXbzPPrhpXmqVgXP864wV410NnCiUIOBFMI'
+});
 
-albums.then(data => console.log(data));
+
+const albums = spotify.search.albums('Incubus');
+
+albums.then(data => data.albums.items.map(item => console.log(item.name)));

@@ -10,31 +10,12 @@
 
   <script src="../dist/spotify-wrapper.umd.js">  </script>
 
-  <!-- <script>
+  <script>
     const spotify = new SpotifyWrapper({
-      token: ''
+      token: 'BQAF08JQ_3EOBGdxMtcY0Z4jhGAbWS3djkAc82f5YJ1XmKJqcS1sApgFY2M4L-rAq7StsWmAvMaeBOgkYGYqyv_DSAuKDP7g3xE3SM85y1ofsfyguRY7HVLIG9t3ynn4SM0xWBbChfqfUDE'
     })
 
-    const albums = spotifyWrapper.searchAlbums('Incubus');
-    const albumsEl = document.getElementById('albums');
-
-    album
-      .then(data => {
-        markup = data.albums.items.map( item =>  // fazer um map de cada item
-          `<img src="${item.images[0].url}" alt="${item.name}" /> `
-        ).join('') // responsavel por juntar todas as imagens para o markup
-
-        albumsEl.innerHTML = markup;
-      })
-
-  </script> -->
-
-<script>
-    const spotify = new spotifyWrapper({
-      token: 'BQB1gxow61SGQBZBUxLC32Mix_qke_etS7BJt__Akbe8K1z7KVE2VsiOX_zdWfIu9QaMrpIYhwv3DkeZVqY8uKYBdW2g-ct6kVdoaAdBtpaiTNnOfvIa9qNytnyD4wpjgmlSyZNmlgcxhLk'
-    })
-
-    const albums = spotify.search.albums('Incubus');
+    const albums = spotify.search.albums('Soundgarden');
     const albumsEl = document.getElementById('albums');
 
     albums
@@ -46,7 +27,6 @@
         albumsEl.innerHTML = markup;
       })
   </script>
-
 
 </body>
 </html>
